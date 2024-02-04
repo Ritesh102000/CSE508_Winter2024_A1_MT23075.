@@ -3,7 +3,7 @@ import string
 import os
 from spacy.lang.en.stop_words import STOP_WORDS
 def tokenization(x):
-    filepath = f'C:/Users/pc/Desktop/IR-MT23075/text_files/{x}'
+    filepath = f'text_files/{x}'
     with open(filepath,'r') as file:
         content = file.read()
         content = content.lower()
