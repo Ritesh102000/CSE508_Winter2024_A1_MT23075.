@@ -12,7 +12,13 @@ def tokenization(x):
         tokens = [token.text for token in doc if token.text not in string.punctuation and token.text not in STOP_WORDS and not token.is_space]    
     return tokens
 
-for filename in os.listdir('text_files'):
+lst=[]
+for i in range(1,6):
+    x = input()
+    lst.append(x+".txt")
+
+
+for filename in lst:
     temp = tokenization(filename)
     with open(f'output/{filename}','w') as file:
         file.write(" ".join(temp))
