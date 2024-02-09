@@ -61,9 +61,9 @@ def execute_query(query, inverted_index):
                 results &= set(inverted_index[term].keys())
             elif operation == 'OR':
                 results |= set(inverted_index[term].keys())
-            elif operation == 'AND NOT':
+            elif operation == 'ANDNOT':
                 results -= set(inverted_index[term].keys())
-            elif operation == 'OR NOT':
+            elif operation == 'ORNOT':
                 results ^= set(inverted_index[term].keys())
 
     return results
